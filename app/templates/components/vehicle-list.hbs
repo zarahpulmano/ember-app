@@ -1,0 +1,24 @@
+<div class="row vehicle-row" id={{vehicle.vehicleMovementId}}>
+    <div class="vehicle-image col-md-2 col-xs-2">
+        <img src={{vehicle.imageFile}}/>
+    </div>
+    <div class="col-md-8 col-xs-8">
+        <div class="row">
+            {{#link-to "vehicle" vehicle.vehicleMovementId}}
+                <label class="col-md-10 col-xs-10">{{vehicle.year}} {{vehicle.make}} {{vehicle.model}} {{vehicle.trim}}</label>
+            {{/link-to}}
+
+            <label class="col-md-2 col-xs-2">{{vehicle.mileage}} mi</label>
+        </div>
+        <div class="row">
+            <label class="col-md-12 col-xs-12">Asking Price: {{vehicle-helper vehicle.askingPrice}}</label>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-xs-12">{{input value=vehicle.make}}</div>
+        </div>
+    
+    </div>
+    <div class="col-md-2 col-xs-2">
+        <label>{{vehicle.color}}</label>
+    </div>
+</div>

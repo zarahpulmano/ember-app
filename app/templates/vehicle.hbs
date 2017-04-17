@@ -1,0 +1,24 @@
+{{#if model}} 
+    <div class="row">
+        <label class="col-md-12 col-xs-12 vehicle-title">{{model.year}} {{model.make}} {{model.model}} {{model.trim}}</label>
+        <div class="vehicle-image {{if zoom "col-xs-6 col-md-6" "col-xs-3 col-xs-3"}}">
+            <a {{action "toggleImage"}}><img src={{model.imageFile}}/></a>
+        </div>
+        <div class="{{if zoom "col-xs-6 col-md-6" "col-xs-12 col-xs-12"}}">
+        </div>
+    </div>
+    <div class="row vehicle-details">
+        {{#if model.inspected}}
+            <label class="col-md-12 col-xs-12">Professionally Inspected</label>
+        {{/if}}
+        <label class="col-md-12 col-xs-12">Location: {{model.location}}</label>
+        <label class="col-md-12 col-xs-12">Color: {{model.color}}</label>
+        <label class="col-md-12 col-xs-12">Mileage: {{model.mileage}}</label>
+        <label class="col-md-12 col-xs-12">Asking Price: {{model.askingPrice}}</label>
+    </div>
+{{/if}}
+<div class="row see-all-vehicles">
+    {{#link-to "vehicles"}}
+        <label class="col-md-12 col-xs-12">See All Vehicles</label>
+    {{/link-to}}
+</div>
