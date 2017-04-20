@@ -1,0 +1,14 @@
+{{!--<div class="row">
+    <div class="col-xs-12 col-md-12">
+        <button {{action 'testService'}} class="btn btn-default">Bid</button>
+    </div>
+</div>--}}
+<div class="row">
+    {{#vehicle-list-filter filter=(route-action "filterByMake")  value=value vehicles=vehicles as |cars|}}
+        <div class="col-xs-12 col-md-12 vehicles-container">
+            {{#each cars as |vehicle|}}
+                {{vehicle-row vehicle=vehicle vehicleId=vehicle.vehicleMovementId bidAmount=vehicle.bidAmount buttonAction=(route-action "bid")}}
+            {{/each}}
+        </div>
+    {{/vehicle-list-filter}}
+</div>

@@ -9,5 +9,13 @@ module.exports = {
     browser: true
   },
   rules: {
-  }
+    "no-console": 0,
+    "no-unused-vars": 0
+  },
+  globals: {
+      "$": false,
+      "sinon": false,
+      "server": false,
+      "Promise": false
+  },
 };

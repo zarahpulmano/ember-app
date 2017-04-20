@@ -1,25 +1,16 @@
 import Ember from 'ember';
-import {VehicleList} from '../utilities/common.strings';
-import {Vehicle} from '../utilities/vehicle-helper';
+
 
 export default Ember.Route.extend({
-     model(params) {
-        
-        return this.store.findRecord('vehicle', params.vehicle_id);
+    vehicleService: Ember.inject.service(),
 
-        // return new Ember.RSVP.Promise(function(resolve){
-        //     var url = "http://localhost:8081/vehicles/" + params.vehicle_id;
-        //     $.ajax({
-        //         type: "GET",
-        //         url: url
-        //     }).then(function(response) {
-        //         resolve(response);
-        //     });
-        // });
+    model(params) {
+        return this.get('vehicleService').getVehicle(params.id);
     },
 
     actions: {
-        error: function (error) {
+        error (error) {
+            console.log('Routing error: ' + JSON.stringify(error));
             this.transitionTo('vehicle-not-found');
         }
     }

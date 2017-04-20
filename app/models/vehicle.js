@@ -1,5 +1,5 @@
+import Ember from 'ember';
 import DS from 'ember-data';
-const { Model, attr } = DS;
 
 export default DS.Model.extend({
   vehicleMovementId: DS.attr('number'),
@@ -14,5 +14,9 @@ export default DS.Model.extend({
   location: DS.attr('string'), 
   inspected: DS.attr('boolean'),
   kbb: DS.attr('number'),
-  zipcode: DS.attr('number')
+  zipcode: DS.attr('number'),
+  bidAmount: 0,
+  vehicleTitle: Ember.computed('year', 'make', 'model', 'trim', function() {
+    return `${this.get('year')} ${this.get('make')} ${this.get('model')} ${this.get('trim')}`;
+  })
 });

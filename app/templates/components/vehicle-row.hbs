@@ -5,7 +5,7 @@
     <div class="col-md-8 col-xs-8">
         <div class="row">
             {{#link-to "vehicle" vehicle.vehicleMovementId}}
-                <label class="col-md-10 col-xs-10">{{vehicle.year}} {{vehicle.make}} {{vehicle.model}} {{vehicle.trim}}</label>
+                <label class="col-md-10 col-xs-10">{{vehicle.vehicleTitle}}</label>
             {{/link-to}}
 
             <label class="col-md-2 col-xs-2">{{vehicle.mileage}} mi</label>
@@ -14,7 +14,8 @@
             <label class="col-md-12 col-xs-12">Asking Price: {{vehicle-helper vehicle.askingPrice}}</label>
         </div>
         <div class="row">
-            <div class="col-md-12 col-xs-12">{{input value=vehicle.make}}</div>
+            <label class="col-md-6 col-xs-6 bidAmount">Bid Amount: {{vehicle-helper bidAmount}}</label>
+            <div class="col-md-6 col-xs-6"><button {{action 'clickBid'}} class="btn btn-default">Bid</button></div>
         </div>
     
     </div>
