@@ -1,10 +1,10 @@
-<div class="row vehicle-row" id={{vehicle.vehicleMovementId}}>
+<div class="row vehicle-row" id={{concat 'vehicle-' vehicle.vehicleMovementId}}>
     <div class="vehicle-image col-md-2 col-xs-2">
         <img src={{vehicle.imageFile}}/>
     </div>
     <div class="col-md-8 col-xs-8">
         <div class="row">
-            {{#link-to "vehicle" vehicle.vehicleMovementId}}
+            {{#link-to "vehicle.index" vehicle.vehicleMovementId id=vehicle.vehicleMovementId}}
                 <label class="col-md-10 col-xs-10">{{vehicle.vehicleTitle}}</label>
             {{/link-to}}
 

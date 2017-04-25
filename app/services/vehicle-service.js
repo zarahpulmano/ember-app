@@ -7,8 +7,8 @@ export default Ember.Service.extend({
         this._super(...arguments);
     },
 
-    runCallback(callback) {
-        callback('foo');
+    helloWorld() {
+        return 'Hello World';
     },
     
     getVehicles() {
@@ -16,7 +16,6 @@ export default Ember.Service.extend({
         return new Ember.RSVP.Promise(function(resolve, reject) {
             store.findAll('vehicle')
             .then(function(result) {
-                console.log(result);
                 resolve(result);
             }).catch(function(error) {
                 reject(error);
@@ -27,12 +26,22 @@ export default Ember.Service.extend({
     getVehicle(id) {
         let store = this.get('store');
         return new Ember.RSVP.Promise(function(resolve, reject) {
-            store.findRecord('vehicle', id)
-            .then(function(result) {
-                resolve(result);
-            }).catch(function(error) {
-                reject(error);
-            });
+            if (id) {
+                store.findRecord('vehicle', id)
+                .then(function(result) {
+                    if (result) {
+                        resolve(result);
+                    }
+                    else {
+                        reject({"message" : "Could not find vehicle."});
+                    }
+                }).catch(function(error) {
+                    reject(error);
+                });
+            }
+            else {
+                reject({"message" : "Vehicle id is required."});
+            }
         });
     },
 

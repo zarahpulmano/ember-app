@@ -1,49 +1,56 @@
 import { expect, assert } from 'chai';
-import { describe, it, beforeEach, afterEach } from 'mocha';
+import { describe, it, before, after, beforeEach, afterEach} from 'mocha';
 import { setupTest } from 'ember-mocha';
 import startMirage from 'ember-app/tests/helpers/start-mirage';
 import Ember from 'ember';
 
-
 describe('Unit | Service | vehicle service', function() {
+   
     setupTest('service:vehicle-service', {
-        setup() {
-            startMirage(this.container);
-        },
-        afterEach() {
-            server.shutDown();
+    });
+    
+    beforeEach(function() {
+        if(server==undefined) {
+            startMirage();
         }
     });
-  
+
+    afterEach(function() {
+        if (server!=undefined) {
+            server.shutdown();
+        }
+    });
+
     it('exists', function() {
+        assert(true);   
         let service = this.subject();
         expect(service).to.be.ok;
     });
 
-    it('should be able to run get vehicles', function(done){
+    it('should get response from getVehicles', function(done){
 
         let mockedModel = server.createList('vehicle', 20);
-        var stub = sinon.stub();
+        let stub = sinon.stub();
         stub.resolves(mockedModel);
-        
+
         let service = this.subject({
             store: {
                 findAll: stub
             }
         });
     
-        service.getVehicles().then(function (value) {
-            assert.equal(value.length, 20); 
+        service.getVehicles().then(function (response) {
+            assert.equal(response.length, 20); 
             done();
         });
+
+        server.shutdown();
     });
 
-    it('should be able to run get vehicle', function(done){
-
+    it('should get response from getVehicle', function(done){
         let id = 1000;
-        var mockedModel = server.create('vehicle', { id: id, vehicleMovementId: id});
-
-        var stub = sinon.stub();
+        let mockedModel = server.create('vehicle', { id: id, vehicleMovementId: id});        
+        let stub = sinon.stub();
         stub.resolves(mockedModel.toJSON());
 
         let service = this.subject({
@@ -53,10 +60,29 @@ describe('Unit | Service | vehicle service', function() {
         });
 
         service.getVehicle(id).then(function (result) {
-            assert.equal(result.vehicleMovementId, id); 
+            assert.equal(result.vehicleMovementId, id, 'vehicleMovementId of result should equal id param'); 
             done();
         });
     });
 
+    it('should require id param in getVehicle', function(done){
+
+        let id = 1000;
+        let mockedModel = server.create('vehicle', { id: id, vehicleMovementId: id});        
+        let stub = sinon.stub();
+
+        let service = this.subject({
+            store: {
+                findRecord: stub
+            }
+        });
+
+        service.getVehicle().then(function (result) {
+        }).catch(function(error){
+            let message = error.message;
+            assert.equal(message,'Vehicle id is required.','Should get error message');
+            done();
+        });
+    });
 
 });

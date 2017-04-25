@@ -15,7 +15,7 @@ module.exports = {
   globals: {
       "$": false,
       "sinon": false,
-      "server": false,
-      "Promise": false
+      "spy": false,
+      "server": true
   },
 };

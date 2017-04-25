@@ -1,17 +1,20 @@
 import Ember from 'ember';
 
-
 export default Ember.Route.extend({
     vehicleService: Ember.inject.service(),
+    errorRoute: 'vehicle-not-found',
 
     model(params) {
         return this.get('vehicleService').getVehicle(params.id);
     },
 
+    handleError () {
+        this.transitionTo(this.get('errorRoute'));
+    },
+
     actions: {
         error (error) {
-            console.log('Routing error: ' + JSON.stringify(error));
-            this.transitionTo('vehicle-not-found');
+            this.handleError();
         }
     }
 });

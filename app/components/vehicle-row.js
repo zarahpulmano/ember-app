@@ -18,11 +18,7 @@ export default Ember.Component.extend({
 
     actions: {
         clickBid() {
-            //let vehicle = this.get('vehicleId');
-            //let action = this.get('buttonAction');
-            
             this.incrementProperty('bidAmount',500);
-            //action();
         }
     }
 });

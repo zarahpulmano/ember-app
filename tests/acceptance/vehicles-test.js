@@ -7,6 +7,10 @@ describe('Acceptance | vehicles', function() {
   let application;
 
   beforeEach(function() {
+    if (server!=undefined) {
+        server.shutdown();
+    }
+    
     application = startApp();
   });
 
@@ -22,7 +26,7 @@ describe('Acceptance | vehicles', function() {
     });
   });
 
-  it('displays Page Header Vehicles For Auction', function() {
+  it('renders page header', function() {
     visit('/vehicles');
 
     return andThen(() => {
@@ -33,13 +37,35 @@ describe('Acceptance | vehicles', function() {
     });
   });
 
-  it('can display list of vehicles', function() {
-    server.createList('vehicle', 10); 
+  it('renders list of vehicles', function() {
+      server.createList('vehicle', 10); 
 
-    visit('/vehicles');
+      visit('/vehicles');
 
-    return andThen(() => {
-      assert.equal(find(".vehicle-row").length, 10);
-    });
+      return andThen(() => {
+        assert.equal(find(".vehicle-row").length, 10);
+      });
   });
+
+    it('it has link to /vehicles/1000', function() {
+      server.createList('vehicle', 10); 
+
+      visit('/vehicles');
+
+      return andThen(() => {
+          assert.equal(find("#1000").prop("href"), 'http://localhost:7357/vehicles/1000');
+      });
+  });
+
+  it('it can visit /vehicles/1000', function() {
+      server.createList('vehicle', 10); 
+
+      visit('/vehicles');
+      click('#1000');
+
+      andThen(() => {
+          assert.equal(currentURL(), '/vehicles/1000');
+      });
+  });
+  
 });

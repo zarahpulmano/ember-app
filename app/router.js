@@ -11,8 +11,8 @@ Router.map(function() {
 
   });
 
-  this.route('vehicle',  { path: 'vehicles/:id' }, function(){
-    
+  this.route('vehicle', { path: 'vehicles' }, function(){
+      this.route('index',  { path: ':id' });
   });
 
   this.route('transportation-dashboard');
