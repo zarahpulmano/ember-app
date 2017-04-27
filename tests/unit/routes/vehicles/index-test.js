@@ -9,8 +9,7 @@ const vehicleServiceStub = Ember.Service.extend({
 describe('Unit | Route | vehicles/index', function() {
 
     setupTest('route:vehicles/index', {
-        unit: true,
-        needs: ['service:vehicle-service']
+        unit: true
     });
 
     beforeEach(function() {

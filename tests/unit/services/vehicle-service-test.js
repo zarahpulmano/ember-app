@@ -7,6 +7,8 @@ import Ember from 'ember';
 describe('Unit | Service | vehicle service', function() {
    
     setupTest('service:vehicle-service', {
+        unit: true,
+        // needs: []
     });
     
     beforeEach(function() {
@@ -22,8 +24,7 @@ describe('Unit | Service | vehicle service', function() {
     });
 
     it('exists', function() {
-        assert(true);   
-        let service = this.subject();
+        let service = this.subject(); 
         expect(service).to.be.ok;
     });
 
@@ -32,7 +33,6 @@ describe('Unit | Service | vehicle service', function() {
         let mockedModel = server.createList('vehicle', 20);
         let stub = sinon.stub();
         stub.resolves(mockedModel);
-
         let service = this.subject({
             store: {
                 findAll: stub
@@ -44,7 +44,16 @@ describe('Unit | Service | vehicle service', function() {
             done();
         });
 
-        server.shutdown();
+    });
+
+    it('should require id param in getVehicle', function(done){
+
+        let service = this.subject();
+        service.getVehicle().catch(function(error){
+            let message = error.message;
+            assert.equal(message,'Vehicle id is required.','Should get error message');
+            done();
+        });
     });
 
     it('should get response from getVehicle', function(done){
@@ -65,24 +74,6 @@ describe('Unit | Service | vehicle service', function() {
         });
     });
 
-    it('should require id param in getVehicle', function(done){
 
-        let id = 1000;
-        let mockedModel = server.create('vehicle', { id: id, vehicleMovementId: id});        
-        let stub = sinon.stub();
-
-        let service = this.subject({
-            store: {
-                findRecord: stub
-            }
-        });
-
-        service.getVehicle().then(function (result) {
-        }).catch(function(error){
-            let message = error.message;
-            assert.equal(message,'Vehicle id is required.','Should get error message');
-            done();
-        });
-    });
 
 });

@@ -53,7 +53,7 @@ describe('Acceptance | vehicles', function() {
       visit('/vehicles');
 
       return andThen(() => {
-          assert.equal(find("#1000").prop("href"), 'http://localhost:7357/vehicles/1000');
+          assert.equal(find("#vehicle-1000").find(".vehicle-link").prop("href"), 'http://localhost:7357/vehicles/1000');
       });
   });
 
@@ -61,7 +61,7 @@ describe('Acceptance | vehicles', function() {
       server.createList('vehicle', 10); 
 
       visit('/vehicles');
-      click('#1000');
+      click('#vehicle-1000 a');
 
       andThen(() => {
           assert.equal(currentURL(), '/vehicles/1000');

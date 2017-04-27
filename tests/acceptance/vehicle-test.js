@@ -49,7 +49,7 @@ describe('Acceptance | vehicle', function() {
 
       visit('/vehicles/10002');
 
-      andThen(() => {
+      return andThen(() => {
           assert.equal(currentURL(), '/vehicle-not-found');
       });
   });

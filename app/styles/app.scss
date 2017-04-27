@@ -11,6 +11,19 @@ body {
     overflow-y: scroll;
 }
 
+/*Virtual List*/
+
+.virtual-each {
+  overflow-y: auto;
+}
+
+.infinite-list-content {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
 .loading {
     text-align:center;
 }
@@ -26,7 +39,7 @@ ul#menu li {
     padding-right: 10px;
 }
 
-.vehicles-container {
+#vehicle-page .vehicles-container {
     height: 600px;
     overflow-y: auto;
 }
@@ -52,4 +65,8 @@ ul#menu li {
 
 .see-all-vehicles {
     margin-top: 10px;
+}
+
+.virtual-item {
+    height: 150px;
 }

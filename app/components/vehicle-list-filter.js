@@ -14,14 +14,19 @@ export default Ember.Component.extend({
         this.set('filteredVehicles',vehicles);
     },
 
+    filterVehicleCallback(result) {
+        this.set('filteredVehicles',result);
+    },    
+    
     actions: {
         filterVehicles() {
             let filterInputValue = this.get('value');
             let filterAction = this.get('filter');
+            var self = this;
 
-            filterAction(filterInputValue).then((filterResults) => 
-                this.set('filteredVehicles', filterResults)
-            );
+            filterAction(filterInputValue).then(function(results){
+                self.filterVehicleCallback(results);
+            });
         }
     }
 
