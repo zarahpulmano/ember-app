@@ -1,15 +1,19 @@
 
 <div id="vehicle-page" class="row">
-    {{!--{{#vehicle-list-filter filter=(route-action "filterByMake")  value=value vehicles=vehicles as |cars|}}
-        <div class="col-xs-12 col-md-12 vehicles-container">
-            {{#each cars as |vehicle|}}
-                {{vehicle-row vehicle=vehicle vehicleId=vehicle.vehicleMovementId bidAmount=vehicle.bidAmount buttonAction=(action "bid")}}
-            {{/each}}
-        </div>
+    {{!--{{#vehicle-list-filter filter=(route-action "filterByMake")  value=value vehicles=vehicles as |vehicles|}}
+
+   
     {{/vehicle-list-filter}}--}}
-    <div class="col-xs-12 col-md-12 vehicles-container">
-        {{#each vehicles as |vehicle|}}
-            {{vehicle-row vehicle=vehicle vehicleId=vehicle.vehicleMovementId bidAmount=vehicle.bidAmount}}
-        {{/each}}
-    </div>
+
+        {{#list-paginated currentPage=vehicles.meta.page 
+            totalPages=vehicles.meta.totalPages 
+            pageRoute='vehicles' 
+            pageLinkSize=10 
+            list=vehicles as |list|}}
+            {{#each list as |item|}}
+                {{vehicle-row vehicle=item vehicleId=item.vehicleMovementId bidAmount=item.bidAmount}}
+            {{/each}}
+
+         {{/list-paginated}}  
+   
 </div>

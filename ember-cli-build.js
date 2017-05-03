@@ -4,10 +4,13 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
       'ember-cli-babel': {
-        includePolyfill: true
+        includePolyfill: true,
+        sourceMaps: 'inline'
       },
-      'hinting': false
-
+      'hinting': false,
+      fingerprint: {
+        prepend: 'http://localhost:8081/ember/'
+      }
   });
 
   // Use `app.import` to add additional libraries to the generated

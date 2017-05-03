@@ -3,13 +3,30 @@ import Ember from 'ember';
 export default Ember.Route.extend({
     vehicleService: Ember.inject.service(),
 
-    model() {
-        return this.get('vehicleService').getVehicles();
+    model(params) {
+        var param = {
+            page: {
+                number: params.page,
+                size: params.size
+            }
+        }
+        
+        return this.get('vehicleService').getVehiclesByParameters(param);
+        
      },
 
     setupController(controller, model) {
         controller.set('vehicles', model);
     },
+
+     queryParams: {
+        page: {
+            refreshModel: true
+        },
+        size: {
+            refreshModel: true
+        }
+     },
 
     actions: {
         filterByMake(make) {

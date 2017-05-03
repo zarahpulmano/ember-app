@@ -7,6 +7,17 @@ export default Ember.Service.extend({
         this._super(...arguments);
     },
 
+     getVehiclesByParameters(params) {
+         let store = this.get('store');
+         return new Ember.RSVP.Promise(function(resolve, reject) {
+            store.query('vehicle',params).then(function(result) {
+                resolve(result);
+            }).catch(function(error) {
+                reject(error);
+            });
+        });
+    },
+
     getVehicles() {
         let store = this.get('store');
         

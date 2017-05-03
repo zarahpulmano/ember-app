@@ -1,16 +1,16 @@
 <div class="row">
-    {{#virtual-each vehicles
-        height=700 itemHeight=150 onScrollBottomed=(route-action 'handlePageBottom')
-        positionIndex=0
-        as |vehicle actualIndex virtualIndex|
-        }}
+
+
+    {{pagination-pager
+        count=vehicles.meta.totalPages
+        current=vehicles.meta.page
+        change='pageChanged'
+        urlTemplate='/vehicles?page={current}'}}
+
+     {{!--{{page-numbers content=vehicles.meta}}--}}
+
+    {{#each vehicles as |vehicle|}}
         {{vehicle-row vehicle=vehicle vehicleId=vehicle.vehicleMovementId bidAmount=vehicle.bidAmount}}
-    {{/virtual-each}}
-    {{!--{{#vehicle-list-filter filter=(route-action "filterByMake")  value=value vehicles=vehicles as |cars|}}
-        <div class="col-xs-12 col-md-12 vehicles-container">
-            {{#each cars as |vehicle|}}
-                {{vehicle-row vehicle=vehicle vehicleId=vehicle.vehicleMovementId bidAmount=vehicle.bidAmount buttonAction=(action "bid")}}
-            {{/each}}
-        </div>
-    {{/vehicle-list-filter}}--}}
+    {{/each}}
+
 </div>

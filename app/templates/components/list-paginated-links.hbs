@@ -1,0 +1,7 @@
+{{#each pages as |page index|}}  
+  {{#if (eq page currentPage) }}
+    {{page}}
+  {{else}}
+    {{#link-to pageRoute (query-params page=page)}}{{page}}{{/link-to}}
+  {{/if}}
+{{/each}}
