@@ -15,6 +15,5 @@ export default Ember.Component.extend(PaginationMixin, {
 
         let list = this.get('list');
         this.set('list',list);
-    }
-
+    },    
 });

@@ -1698,23 +1698,6 @@ export default  [
 		inspected: false,
 		crRating: 4.4,
 		imageFile: "http://localhost:4200/images/2.jpeg"
-	},
-	{
-		vehicleMovementId: 20100,
-		year: 2012,
-		make: "Nissan",
-		model: "Altima",
-		trim: "RWD V8, 5.7 Liter",
-		mileage: 60015,
-		vin: "LO5PS9RDE7XTJ36MA",
-		color: "Black",
-		location: "Morgan Hill CA",
-		zipcode: 95037,
-		askingPrice: 1707,
-		kbb: 6966,
-		inspected: true,
-		crRating: 4,
-		imageFile: "http://localhost:4200/images/7.jpeg"
 	}
 ];
 

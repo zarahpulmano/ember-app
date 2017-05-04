@@ -14,8 +14,11 @@
             <label class="col-md-12 col-xs-12">Asking Price: {{vehicle-helper vehicle.askingPrice}}</label>
         </div>
         <div class="row">
-            <label class="col-md-6 col-xs-6 bidAmount">Bid Amount: {{vehicle-helper bidAmount}}</label>
-            <div class="col-md-6 col-xs-6"><button {{action 'clickBid'}} class="btn btn-default">Bid</button></div>
+            <label class="col-md-6 col-xs-6 bidAmount">Bid Amount: {{vehicle-helper vehicle.bidAmount}}</label>
+            <div class="col-md-6 col-xs-6">
+                <button {{action 'clickBid' vehicle.vehicleMovementId vehicle.bidAmount}} 
+                    class="btn btn-default bidButton">Bid</button>
+            </div>
         </div>
     
     </div>

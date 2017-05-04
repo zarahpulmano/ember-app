@@ -1,16 +1,14 @@
-<div class="row">
+<div id="vehicle-page" class="row">
+    
+        {{#list-paginated currentPage=vehicles.meta.page 
+            totalPages=vehicles.meta.totalPages 
+            pageRoute='vehicles' 
+            pageLinkSize=10 
+            list=vehicles as |list|}}
+            {{#each list as |item|}}
+                {{vehicle-row vehicle=item vehicleId=item.vehicleMovementId bidAmount=item.bidAmount}}
+            {{/each}}
 
-
-    {{pagination-pager
-        count=vehicles.meta.totalPages
-        current=vehicles.meta.page
-        change='pageChanged'
-        urlTemplate='/vehicles?page={current}'}}
-
-     {{!--{{page-numbers content=vehicles.meta}}--}}
-
-    {{#each vehicles as |vehicle|}}
-        {{vehicle-row vehicle=vehicle vehicleId=vehicle.vehicleMovementId bidAmount=vehicle.bidAmount}}
-    {{/each}}
-
+         {{/list-paginated}}  
+   
 </div>

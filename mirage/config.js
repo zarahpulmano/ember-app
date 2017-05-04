@@ -18,10 +18,10 @@ export default function() {
         }
 
         //paginate
-        if (request.queryParams["page[number]"] && request.queryParams["page[size]"]) {
+        if (request.queryParams["page"] && request.queryParams["size"]) {
             
-            let pageNumber = Number(request.queryParams["page[number]"]);
-            let pageSize = Number(request.queryParams["page[size]"]);
+            let pageNumber = Number(request.queryParams["page"]);
+            let pageSize = Number(request.queryParams["size"]);
             result.totalPages = Math.ceil(result.models.length / pageSize);
             result.page = pageNumber;
             result.perPage = pageSize;
@@ -35,7 +35,13 @@ export default function() {
         return result;
     });
 
-    this.get('vehicles/:id');
+    //this.get('vehicles/:id');
+
+    this.get('/vehicles/:id', ({ vehicles }, request) => {
+        let id = request.params.id;
+        
+        return vehicles.findBy({vehicleMovementId: id}); 
+    });
 
 }
 

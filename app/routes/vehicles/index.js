@@ -4,14 +4,7 @@ export default Ember.Route.extend({
     vehicleService: Ember.inject.service(),
 
     model(params) {
-        var param = {
-            page: {
-                number: params.page,
-                size: params.size
-            }
-        }
-        
-        return this.get('vehicleService').getVehiclesByParameters(param);
+        return this.get('vehicleService').getVehiclesByParameters(params);
         
      },
 
@@ -35,8 +28,10 @@ export default Ember.Route.extend({
             } else {
                 return this.get('vehicleService').getVehicles();
             }
+        },
+
+        pageChanged(current, previous) {
+            this.transitionTo('vehicles', { queryParams: { page: current   }});
         }
     }
 });
-
-

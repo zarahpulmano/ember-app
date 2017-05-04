@@ -16,6 +16,7 @@ module.exports = {
       "$": false,
       "sinon": false,
       "spy": false,
-      "server": true
+      "server": true,
+      "PushStream": true
   },
 };
