@@ -1,15 +1,14 @@
 <div class="row">
     
-    {{#vehicles-wrapper}}
-    
+    {{#vehicles-pager}}
         {{pagination-pager
-            count=vehicles.meta.totalPages
-            current=vehicles.meta.page
-            change='pageChanged' class="center vehicles-pagination"}}
+            count=5
+            current=page
+            class="center vehicles-pagination"}}
 
-        {{#each vehicles as |vehicle|}}
+        {{#each filteredVehicles as |vehicle|}}
             {{vehicle-row vehicle=vehicle}}
         {{/each}}
+    {{/vehicles-pager}}
         
-    {{/vehicles-wrapper}}
 </div>

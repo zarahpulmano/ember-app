@@ -16,6 +16,8 @@ export default DS.Model.extend({
   kbb: DS.attr('number'),
   zipcode: DS.attr('number'),
   bidAmount: 0,
+  bidder:'N/A',
+  bidderAvatar:'',
   vehicleTitle: Ember.computed('year', 'make', 'model', 'trim', function() {
     return `${this.get('year')} ${this.get('make')} ${this.get('model')} ${this.get('trim')}`;
   })

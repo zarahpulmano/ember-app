@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export function formatCurrency(params) {
-  let amount = params[0];
+  let amount =  Number(params[0]).toLocaleString('en'); 
   return `$${amount}`;
 }
 

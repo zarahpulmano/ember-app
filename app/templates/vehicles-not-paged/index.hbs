@@ -1,0 +1,8 @@
+<div id="vehicle-page" class="row">
+    {{#vehicles-pager}}
+        {{#each vehicles as |vehicle|}}
+            {{vehicle-row vehicle=vehicle}}
+        {{/each}} 
+    {{/vehicles-pager}}
+   
+</div>

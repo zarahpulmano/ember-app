@@ -1,1 +1,11 @@
-{{outlet}}
+    
+        {{#list-paginated currentPage=vehicles.meta.page 
+            totalPages=vehicles.meta.totalPages 
+            pageRoute='vehicles' 
+            pageLinkSize=10 
+            list=vehicles as |list|}}
+            {{#each list as |item|}}
+                {{vehicle-row vehicle=item vehicleId=item.vehicleMovementId bidAmount=item.bidAmount}}
+            {{/each}}
+
+         {{/list-paginated}}  

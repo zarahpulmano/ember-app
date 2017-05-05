@@ -8,17 +8,18 @@ export default Ember.Service.extend(Ember.Evented, {
         this._super(...arguments);
 
         //setup push stream
-        console.log('service init');
-
+        console.log('init service');
         //PushStream.LOG_LEVEL = 'debug';
         let pushstream = new PushStream({
             host: 'ec2-34-209-179-208.us-west-2.compute.amazonaws.com',
             modes: "websocket|eventsource|stream"
         });
         
-        pushstream.onmessage = this.manageEvent.bind(this);
-        pushstream.onstatuschange = this.statusChanged.bind(this);
+        //pushstream.onmessage = this.manageEvent.bind(this);
+        //pushstream.onstatuschange = this.statusChanged.bind(this);
 
+        pushstream.onmessage = Ember.run.bind(this, this.manageEvent);
+        pushstream.onstatuschange = Ember.run.bind(this, this.statusChanged);
         this.set("pushstream",pushstream);
     },
 
@@ -46,7 +47,7 @@ export default Ember.Service.extend(Ember.Evented, {
     },
 
     statusChanged(state) {
-        //console.log('onstatuschange ' + state);
+        console.log('onstatuschange ' + state);
     },
 
     sendMessage(message,callback,callbackParams) {

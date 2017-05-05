@@ -2,27 +2,39 @@
     <div class="vehicle-image col-md-2 col-xs-2">
         <img src={{vehicle.imageFile}}/>
     </div>
-    <div class="col-md-8 col-xs-8">
+    <div class="col-md-5 col-xs-5">
         <div class="row">
-            {{#link-to "vehicle.index" vehicle.vehicleMovementId class="vehicle-link"}}
-                <label class="col-md-10 col-xs-10">{{vehicle.vehicleTitle}}</label>
+            {{#link-to "vehicle.index" vehicle.vehicleMovementId class="vehicle-link col-md-9 col-xs-9"}}
+                <label>{{vehicle.vehicleTitle}}</label>
             {{/link-to}}
 
-            <label class="col-md-2 col-xs-2">{{vehicle.mileage}} mi</label>
+            <label class="col-md-3 col-xs-3">{{vehicle.mileage}} mi</label>
         </div>
         <div class="row">
             <label class="col-md-12 col-xs-12">Asking Price: {{vehicle-helper vehicle.askingPrice}}</label>
         </div>
-        <div class="row">
-            <label class="col-md-6 col-xs-6 bidAmount">Bid Amount: {{vehicle-helper vehicle.bidAmount}}</label>
-            <div class="col-md-6 col-xs-6">
-                <button {{action 'clickBid' vehicle.vehicleMovementId vehicle.bidAmount}} 
-                    class="btn btn-default bidButton">Bid</button>
-            </div>
-        </div>
-    
     </div>
-    <div class="col-md-2 col-xs-2">
+    <div class="col-md-1 col-xs-1">
         <label>{{vehicle.color}}</label>
+    </div>
+    <div class="col-md-4 col-xs-4">    
+            <div class="col-md-3 col-xs-3">
+                <img class="bidderAvatar" src={{vehicle.bidderAvatar}}/>
+            </div>
+            <div class="col-md-9 col-xs-9">
+                <label class="col-md-12 col-xs-12">
+                        Bidder: {{vehicle.bidder}}
+                    </label>
+                <label class="col-md-12 col-xs-12 bidAmount">
+                     {{vehicle-helper vehicle.bidAmount}}
+                </label>
+                <div class="col-md-12 col-xs-12">
+                    Bid Amount: {{input value=inputBid}}
+                </div>
+                <div class="col-md-12 col-xs-12">
+                    <button {{action 'clickBid' vehicle.vehicleMovementId vehicle.bidAmount inputBid}} 
+                        class="btn btn-default bidButton" disabled={{bidButtonDisabled}}>Bid</button>
+                </div>
+            </div>   
     </div>
 </div>

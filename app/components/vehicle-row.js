@@ -3,6 +3,7 @@ import Ember from 'ember';
 export default Ember.Component.extend({
     pushstreamService: Ember.inject.service('pushstream-service'),
     vehicle: null,
+    bidButtonDisabled: false,
     
     init() {
         this._super(...arguments);
@@ -11,43 +12,39 @@ export default Ember.Component.extend({
     didReceiveAttrs() {
         this._super(...arguments);
     },
-
-    didRender() {
-        let self = this;
-        let service = this.get('pushstreamService');
-
-        service.on('onmessage', function(message) {
-            self.handleServiceOnMessage(message);
-        }); 
-    },
-
-    handleServiceOnMessage(message) {
-        console.log('Received' + JSON.stringify(message));
-        let vehicleId = this.get('vehicle.vehicleMovementId');
-        if (message.vehicleMovementId == vehicleId) {
-            this.set('vehicle.bidAmount',message.amount)
-        }
+    
+    beforeClickBid() {
+        this.set('bidButtonDisabled',true)
     },
 
     clickBidCallback() {
-        this.$('.bidButton').prop('disabled',false);
+        console.log('click bid callback');
+        this.set('inputBid',"");
+        this.set('bidButtonDisabled',false)
     },
 
     actions: {
 
-        clickBid(id, bidAmount) {
+        clickBid(id, oldBidAmount, newbidAmount) {
+
+            this.beforeClickBid();
+
             let self = this;
             let service = this.get('pushstreamService');
-            let updatedBid = (bidAmount?parseInt(bidAmount): 0) + 500;            
-            let message = '{"vehicleMovementId":"'+id+'","amount":"'+updatedBid+'"}';
-
-            //actions
-            this.$('.bidButton').prop('disabled',true);
-
-            if (service.pushstream) {
-                service.sendMessage(message,self.clickBidCallback.bind(self));
+            let bidderAvatar = 'http://localhost:8081/images/ember.png';
+            let bidder = 'Ember';
+            let oldBid = oldBidAmount? parseInt(oldBidAmount): 0;
+            let updatedBid = newbidAmount ? parseInt(newbidAmount): 0;
+            if(updatedBid == 0 || updatedBid<oldBid) {
+                updatedBid = oldBid + 500;
             }
-
+            
+            let message = '{"vehicleMovementId":"'+id+'","amount":"'+updatedBid+'","bidder":"'+bidder+'","bidderAvatar":"'+bidderAvatar+'"}';
+            
+            if (service.pushstream) {
+                //service.sendMessage(message,self.clickBidCallback.bind(self));
+                service.sendMessage(message,Ember.run.bind(self, this.clickBidCallback));
+            }
         }
     }
 });

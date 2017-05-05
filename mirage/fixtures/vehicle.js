@@ -14,7 +14,7 @@ export default  [
 		kbb: 4604,
 		inspected: true,
 		crRating: 3.1,
-		imageFile: "http://localhost:4200/images/10.jpeg"
+		imageFile: "http://localhost:8081/images/10.jpeg"
 	},
 	{
 		vehicleMovementId: 20001,

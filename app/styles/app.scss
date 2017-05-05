@@ -39,6 +39,16 @@ ul#menu li {
     padding-bottom: 5px;
 }
 
+.vehicle-row input {
+    width: 100px;
+}
+
+.vehicle-row .bidderAvatar {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
 //vehicle info page
 .vehicle-title {
     font-size: 20px;
