@@ -1,8 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Mixin.create({
-    queryParams: ['page', 'size'],
+    queryParams: ['page'],
     size: 20,
-    page: 1,
-    pageSize: 20
+    page: 1
 });

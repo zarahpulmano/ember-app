@@ -1,27 +1,20 @@
 import Ember from 'ember';
 import PaginationMixin from 'ember-app/mixins/pagination'
 export default Ember.Controller.extend(PaginationMixin, {
+    applicationController: Ember.inject.controller("application"),
     pushstreamService: Ember.inject.service('pushstream-service'),
-    vehicles: null,
-    filteredVehicles: Ember.computed('vehicles', 'page', function() {
-        let vehicles = this.get('vehicles');
-        let pageNumber = this.get('page');
-        let pageSize = this.get('pageSize');
-        let fromIndex = (pageNumber - 1) * pageSize;
-        let toIndex = (fromIndex + pageSize)
-        let vehiclesForCurrentPage = vehicles.slice(fromIndex, toIndex);
-        return vehiclesForCurrentPage;
+    pageRoute: Ember.computed('applicationController.currentPath', function(){
+        return this.get('applicationController.currentPath');
     }),
-
+    vehicles: null,
+    
     subscribeToPushStream() {
 
         console.log('subscribe to onmessage vehicles paged');
         let self = this;
         self._super(...arguments);
         let pushstreamService = this.get('pushstreamService');
-        pushstreamService.on('onmessage', function(message) {
-            self.handleServiceOnMessage(message);
-        });
+        pushstreamService.on('onmessage', Ember.run.bind(this, this.handleServiceOnMessage));
     },
 
     unsubscribeFromPushStream() {
@@ -33,25 +26,20 @@ export default Ember.Controller.extend(PaginationMixin, {
     handleServiceOnMessage(message) {
         console.log('Received Paged Controller ', JSON.stringify(message));
         let self = this;
-        Ember.run(function(){
-            let vehicleMovementId = parseInt(message.vehicleMovementId);
-            let bidAmount = parseInt(message.amount);
-            let bidder = message.bidder;
-            let bidderAvatar = message.bidderAvatar;
-            if (bidderAvatar.length == 0) {
-                bidderAvatar="http://localhost:4200/images/avatarPlaceholder.png"
-            }
+        let vehicleMovementId = parseInt(message.vehicleMovementId);
+        let bidAmount = parseInt(message.amount);
+        let bidder = message.bidder;
+        let bidderAvatar = message.bidderAvatar;
+        if (bidderAvatar.length == 0) {
+            bidderAvatar="http://localhost:4201/images/avatarPlaceholder.png"
+        }
 
-            let vehicles = self.get('vehicles');
-            let vehicle = vehicles.findBy('vehicleMovementId',vehicleMovementId);
-            if (vehicle) {
-                vehicle.set('bidAmount',bidAmount);
-                vehicle.set('bidder',bidder);
-                vehicle.set('bidderAvatar',bidderAvatar);
-            }
-        });
-
-
+        let vehicles = self.get('vehicles');
+        let vehicle = vehicles.findBy('vehicleMovementId',vehicleMovementId);
+        if (vehicle) {
+            vehicle.set('bidAmount',bidAmount);
+            vehicle.set('bidder',bidder);
+            vehicle.set('bidderAvatar',bidderAvatar);
+        }
     }
-
 });

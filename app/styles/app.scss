@@ -32,6 +32,18 @@ ul#menu li {
 .vehicles-pagination .pagination {
     margin: 10px 0;
 }
+.pagination li a {
+    min-width: 40px;
+}
+
+.pagination li.disabled a {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.pagination li a:focus {
+  background: transparent;
+}
 
 //vehicles page
 .vehicle-row {

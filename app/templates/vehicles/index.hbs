@@ -1,14 +1,9 @@
 <div class="row">
     
-    {{#vehicles-pager}}
-        {{pagination-pager
-            count=5
-            current=page
-            class="center vehicles-pagination"}}
-
+    {{#list-paginated page=page size=size list=vehicles displayedPages=10 pageRoute=pageRoute as |filteredVehicles|}}
         {{#each filteredVehicles as |vehicle|}}
             {{vehicle-row vehicle=vehicle}}
         {{/each}}
-    {{/vehicles-pager}}
+    {{/list-paginated}}
         
 </div>

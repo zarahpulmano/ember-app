@@ -11,6 +11,11 @@ export default Ember.Component.extend({
 
     didReceiveAttrs() {
         this._super(...arguments);
+        let vehicle = this.get('vehicle');
+    },
+
+    didRender() {
+        
     },
     
     beforeClickBid() {
@@ -18,9 +23,8 @@ export default Ember.Component.extend({
     },
 
     clickBidCallback() {
-        console.log('click bid callback');
         this.set('inputBid',"");
-        this.set('bidButtonDisabled',false)
+        this.set('bidButtonDisabled',false);
     },
 
     actions: {

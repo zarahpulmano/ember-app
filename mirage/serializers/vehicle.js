@@ -7,7 +7,8 @@ export default RestSerializer.extend({
       json.meta = {
         "totalPages": object.totalPages,
         "page": object.page,
-        "perPage": object.perPage
+        "perPage": object.perPage,
+        "total":object.total
       };
       
     return json;

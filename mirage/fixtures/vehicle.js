@@ -31,7 +31,7 @@ export default  [
 		kbb: 4684,
 		inspected: false,
 		crRating: 3.6,
-		imageFile: "http://localhost:4200/images/6.jpeg"
+		imageFile: "http://localhost:8081/images/6.jpeg"
 	},
 	{
 		vehicleMovementId: 20002,
@@ -48,7 +48,7 @@ export default  [
 		kbb: 3332,
 		inspected: true,
 		crRating: 3.5,
-		imageFile: "http://localhost:4200/images/7.jpeg"
+		imageFile: "http://localhost:8081/images/7.jpeg"
 	},
 	{
 		vehicleMovementId: 20003,
@@ -65,7 +65,7 @@ export default  [
 		kbb: 5447,
 		inspected: true,
 		crRating: 3.6,
-		imageFile: "http://localhost:4200/images/8.jpeg"
+		imageFile: "http://localhost:8081/images/8.jpeg"
 	},
 	{
 		vehicleMovementId: 20004,
@@ -82,7 +82,7 @@ export default  [
 		kbb: 2462,
 		inspected: false,
 		crRating: 4.6,
-		imageFile: "http://localhost:4200/images/9.jpeg"
+		imageFile: "http://localhost:8081/images/9.jpeg"
 	},
 	{
 		vehicleMovementId: 20005,
@@ -99,7 +99,7 @@ export default  [
 		kbb: 5902,
 		inspected: false,
 		crRating: 4.9,
-		imageFile: "http://localhost:4200/images/1.jpeg"
+		imageFile: "http://localhost:8081/images/1.jpeg"
 	},
 	{
 		vehicleMovementId: 20006,
@@ -116,7 +116,7 @@ export default  [
 		kbb: 2523,
 		inspected: true,
 		crRating: 3.2,
-		imageFile: "http://localhost:4200/images/2.jpeg"
+		imageFile: "http://localhost:8081/images/2.jpeg"
 	},
 	{
 		vehicleMovementId: 20007,
@@ -133,7 +133,7 @@ export default  [
 		kbb: 1269,
 		inspected: false,
 		crRating: 4.4,
-		imageFile: "http://localhost:4200/images/3.jpeg"
+		imageFile: "http://localhost:8081/images/3.jpeg"
 	},
 	{
 		vehicleMovementId: 20008,
@@ -150,7 +150,7 @@ export default  [
 		kbb: 3317,
 		inspected: false,
 		crRating: 3.7,
-		imageFile: "http://localhost:4200/images/4.jpeg"
+		imageFile: "http://localhost:8081/images/4.jpeg"
 	},
 	{
 		vehicleMovementId: 20009,
@@ -167,7 +167,7 @@ export default  [
 		kbb: 4872,
 		inspected: true,
 		crRating: 2.3,
-		imageFile: "http://localhost:4200/images/5.jpeg"
+		imageFile: "http://localhost:8081/images/5.jpeg"
 	},
 	{
 		vehicleMovementId: 20010,
@@ -184,7 +184,7 @@ export default  [
 		kbb: 5466,
 		inspected: true,
 		crRating: 3.5,
-		imageFile: "http://localhost:4200/images/10.jpeg"
+		imageFile: "http://localhost:8081/images/10.jpeg"
 	},
 	{
 		vehicleMovementId: 20011,
@@ -201,7 +201,7 @@ export default  [
 		kbb: 6954,
 		inspected: false,
 		crRating: 2.7,
-		imageFile: "http://localhost:4200/images/1.jpeg"
+		imageFile: "http://localhost:8081/images/1.jpeg"
 	},
 	{
 		vehicleMovementId: 20012,
@@ -218,7 +218,7 @@ export default  [
 		kbb: 1550,
 		inspected: false,
 		crRating: 4.8,
-		imageFile: "http://localhost:4200/images/3.jpeg"
+		imageFile: "http://localhost:8081/images/3.jpeg"
 	},
 	{
 		vehicleMovementId: 20013,
@@ -235,7 +235,7 @@ export default  [
 		kbb: 6304,
 		inspected: true,
 		crRating: 3.4,
-		imageFile: "http://localhost:4200/images/1.jpeg"
+		imageFile: "http://localhost:8081/images/1.jpeg"
 	},
 	{
 		vehicleMovementId: 20014,
@@ -252,7 +252,7 @@ export default  [
 		kbb: 5101,
 		inspected: true,
 		crRating: 4.6,
-		imageFile: "http://localhost:4200/images/9.jpeg"
+		imageFile: "http://localhost:8081/images/9.jpeg"
 	},
 	{
 		vehicleMovementId: 20015,
@@ -269,7 +269,7 @@ export default  [
 		kbb: 4336,
 		inspected: false,
 		crRating: 2.7,
-		imageFile: "http://localhost:4200/images/5.jpeg"
+		imageFile: "http://localhost:8081/images/5.jpeg"
 	},
 	{
 		vehicleMovementId: 20016,
@@ -286,7 +286,7 @@ export default  [
 		kbb: 1943,
 		inspected: true,
 		crRating: 3.5,
-		imageFile: "http://localhost:4200/images/6.jpeg"
+		imageFile: "http://localhost:8081/images/6.jpeg"
 	},
 	{
 		vehicleMovementId: 20017,
@@ -303,7 +303,7 @@ export default  [
 		kbb: 6490,
 		inspected: false,
 		crRating: 2.3,
-		imageFile: "http://localhost:4200/images/1.jpeg"
+		imageFile: "http://localhost:8081/images/1.jpeg"
 	},
 	{
 		vehicleMovementId: 20018,
@@ -320,7 +320,7 @@ export default  [
 		kbb: 4559,
 		inspected: true,
 		crRating: 2.8,
-		imageFile: "http://localhost:4200/images/2.jpeg"
+		imageFile: "http://localhost:8081/images/2.jpeg"
 	},
 	{
 		vehicleMovementId: 20019,
@@ -337,7 +337,7 @@ export default  [
 		kbb: 5897,
 		inspected: true,
 		crRating: 4.2,
-		imageFile: "http://localhost:4200/images/3.jpeg"
+		imageFile: "http://localhost:8081/images/3.jpeg"
 	},
 	{
 		vehicleMovementId: 20020,
@@ -354,7 +354,7 @@ export default  [
 		kbb: 2246,
 		inspected: true,
 		crRating: 2.7,
-		imageFile: "http://localhost:4200/images/6.jpeg"
+		imageFile: "http://localhost:8081/images/6.jpeg"
 	},
 	{
 		vehicleMovementId: 20021,
@@ -371,7 +371,7 @@ export default  [
 		kbb: 3298,
 		inspected: true,
 		crRating: 2.1,
-		imageFile: "http://localhost:4200/images/9.jpeg"
+		imageFile: "http://localhost:8081/images/9.jpeg"
 	},
 	{
 		vehicleMovementId: 20022,
@@ -388,7 +388,7 @@ export default  [
 		kbb: 5513,
 		inspected: false,
 		crRating: 3.1,
-		imageFile: "http://localhost:4200/images/6.jpeg"
+		imageFile: "http://localhost:8081/images/6.jpeg"
 	},
 	{
 		vehicleMovementId: 20023,
@@ -405,7 +405,7 @@ export default  [
 		kbb: 2408,
 		inspected: true,
 		crRating: 4.6,
-		imageFile: "http://localhost:4200/images/3.jpeg"
+		imageFile: "http://localhost:8081/images/3.jpeg"
 	},
 	{
 		vehicleMovementId: 20024,
@@ -422,7 +422,7 @@ export default  [
 		kbb: 1897,
 		inspected: true,
 		crRating: 2.8,
-		imageFile: "http://localhost:4200/images/5.jpeg"
+		imageFile: "http://localhost:8081/images/5.jpeg"
 	},
 	{
 		vehicleMovementId: 20025,
@@ -439,7 +439,7 @@ export default  [
 		kbb: 2255,
 		inspected: true,
 		crRating: 2.4,
-		imageFile: "http://localhost:4200/images/6.jpeg"
+		imageFile: "http://localhost:8081/images/6.jpeg"
 	},
 	{
 		vehicleMovementId: 20026,
@@ -456,7 +456,7 @@ export default  [
 		kbb: 4477,
 		inspected: false,
 		crRating: 2.7,
-		imageFile: "http://localhost:4200/images/6.jpeg"
+		imageFile: "http://localhost:8081/images/6.jpeg"
 	},
 	{
 		vehicleMovementId: 20027,
@@ -473,7 +473,7 @@ export default  [
 		kbb: 3462,
 		inspected: false,
 		crRating: 4.9,
-		imageFile: "http://localhost:4200/images/3.jpeg"
+		imageFile: "http://localhost:8081/images/3.jpeg"
 	},
 	{
 		vehicleMovementId: 20028,
@@ -490,7 +490,7 @@ export default  [
 		kbb: 4034,
 		inspected: false,
 		crRating: 4.8,
-		imageFile: "http://localhost:4200/images/9.jpeg"
+		imageFile: "http://localhost:8081/images/9.jpeg"
 	},
 	{
 		vehicleMovementId: 20029,
@@ -507,7 +507,7 @@ export default  [
 		kbb: 3729,
 		inspected: false,
 		crRating: 3.6,
-		imageFile: "http://localhost:4200/images/6.jpeg"
+		imageFile: "http://localhost:8081/images/6.jpeg"
 	},
 	{
 		vehicleMovementId: 20030,
@@ -524,7 +524,7 @@ export default  [
 		kbb: 1159,
 		inspected: true,
 		crRating: 4.5,
-		imageFile: "http://localhost:4200/images/10.jpeg"
+		imageFile: "http://localhost:8081/images/10.jpeg"
 	},
 	{
 		vehicleMovementId: 20031,
@@ -541,7 +541,7 @@ export default  [
 		kbb: 6894,
 		inspected: true,
 		crRating: 3.1,
-		imageFile: "http://localhost:4200/images/3.jpeg"
+		imageFile: "http://localhost:8081/images/3.jpeg"
 	},
 	{
 		vehicleMovementId: 20032,
@@ -558,7 +558,7 @@ export default  [
 		kbb: 3960,
 		inspected: false,
 		crRating: 2.5,
-		imageFile: "http://localhost:4200/images/10.jpeg"
+		imageFile: "http://localhost:8081/images/10.jpeg"
 	},
 	{
 		vehicleMovementId: 20033,
@@ -575,7 +575,7 @@ export default  [
 		kbb: 3331,
 		inspected: true,
 		crRating: 2.4,
-		imageFile: "http://localhost:4200/images/8.jpeg"
+		imageFile: "http://localhost:8081/images/8.jpeg"
 	},
 	{
 		vehicleMovementId: 20034,
@@ -592,7 +592,7 @@ export default  [
 		kbb: 2983,
 		inspected: false,
 		crRating: 4.3,
-		imageFile: "http://localhost:4200/images/2.jpeg"
+		imageFile: "http://localhost:8081/images/2.jpeg"
 	},
 	{
 		vehicleMovementId: 20035,
@@ -609,7 +609,7 @@ export default  [
 		kbb: 5204,
 		inspected: false,
 		crRating: 4.7,
-		imageFile: "http://localhost:4200/images/5.jpeg"
+		imageFile: "http://localhost:8081/images/5.jpeg"
 	},
 	{
 		vehicleMovementId: 20036,
@@ -626,7 +626,7 @@ export default  [
 		kbb: 5770,
 		inspected: false,
 		crRating: 2,
-		imageFile: "http://localhost:4200/images/10.jpeg"
+		imageFile: "http://localhost:8081/images/10.jpeg"
 	},
 	{
 		vehicleMovementId: 20037,
@@ -643,7 +643,7 @@ export default  [
 		kbb: 6637,
 		inspected: true,
 		crRating: 2,
-		imageFile: "http://localhost:4200/images/1.jpeg"
+		imageFile: "http://localhost:8081/images/1.jpeg"
 	},
 	{
 		vehicleMovementId: 20038,
@@ -660,7 +660,7 @@ export default  [
 		kbb: 5955,
 		inspected: false,
 		crRating: 2,
-		imageFile: "http://localhost:4200/images/3.jpeg"
+		imageFile: "http://localhost:8081/images/3.jpeg"
 	},
 	{
 		vehicleMovementId: 20039,
@@ -677,7 +677,7 @@ export default  [
 		kbb: 3292,
 		inspected: false,
 		crRating: 2.4,
-		imageFile: "http://localhost:4200/images/4.jpeg"
+		imageFile: "http://localhost:8081/images/4.jpeg"
 	},
 	{
 		vehicleMovementId: 20040,
@@ -694,7 +694,7 @@ export default  [
 		kbb: 1086,
 		inspected: false,
 		crRating: 2.4,
-		imageFile: "http://localhost:4200/images/9.jpeg"
+		imageFile: "http://localhost:8081/images/9.jpeg"
 	},
 	{
 		vehicleMovementId: 20041,
@@ -711,7 +711,7 @@ export default  [
 		kbb: 1447,
 		inspected: true,
 		crRating: 2.7,
-		imageFile: "http://localhost:4200/images/2.jpeg"
+		imageFile: "http://localhost:8081/images/2.jpeg"
 	},
 	{
 		vehicleMovementId: 20042,
@@ -728,7 +728,7 @@ export default  [
 		kbb: 6750,
 		inspected: false,
 		crRating: 2.5,
-		imageFile: "http://localhost:4200/images/6.jpeg"
+		imageFile: "http://localhost:8081/images/6.jpeg"
 	},
 	{
 		vehicleMovementId: 20043,
@@ -745,7 +745,7 @@ export default  [
 		kbb: 3239,
 		inspected: false,
 		crRating: 2.6,
-		imageFile: "http://localhost:4200/images/7.jpeg"
+		imageFile: "http://localhost:8081/images/7.jpeg"
 	},
 	{
 		vehicleMovementId: 20044,
@@ -762,7 +762,7 @@ export default  [
 		kbb: 4771,
 		inspected: false,
 		crRating: 3.4,
-		imageFile: "http://localhost:4200/images/8.jpeg"
+		imageFile: "http://localhost:8081/images/8.jpeg"
 	},
 	{
 		vehicleMovementId: 20045,
@@ -779,7 +779,7 @@ export default  [
 		kbb: 1125,
 		inspected: false,
 		crRating: 4.3,
-		imageFile: "http://localhost:4200/images/2.jpeg"
+		imageFile: "http://localhost:8081/images/2.jpeg"
 	},
 	{
 		vehicleMovementId: 20046,
@@ -796,7 +796,7 @@ export default  [
 		kbb: 2917,
 		inspected: false,
 		crRating: 4.2,
-		imageFile: "http://localhost:4200/images/3.jpeg"
+		imageFile: "http://localhost:8081/images/3.jpeg"
 	},
 	{
 		vehicleMovementId: 20047,
@@ -813,7 +813,7 @@ export default  [
 		kbb: 4840,
 		inspected: false,
 		crRating: 3.7,
-		imageFile: "http://localhost:4200/images/8.jpeg"
+		imageFile: "http://localhost:8081/images/8.jpeg"
 	},
 	{
 		vehicleMovementId: 20048,
@@ -830,7 +830,7 @@ export default  [
 		kbb: 5178,
 		inspected: true,
 		crRating: 3.7,
-		imageFile: "http://localhost:4200/images/7.jpeg"
+		imageFile: "http://localhost:8081/images/7.jpeg"
 	},
 	{
 		vehicleMovementId: 20049,
@@ -847,7 +847,7 @@ export default  [
 		kbb: 3561,
 		inspected: true,
 		crRating: 4.9,
-		imageFile: "http://localhost:4200/images/1.jpeg"
+		imageFile: "http://localhost:8081/images/1.jpeg"
 	},
 	{
 		vehicleMovementId: 20050,
@@ -864,7 +864,7 @@ export default  [
 		kbb: 4592,
 		inspected: true,
 		crRating: 4.2,
-		imageFile: "http://localhost:4200/images/5.jpeg"
+		imageFile: "http://localhost:8081/images/5.jpeg"
 	},
 	{
 		vehicleMovementId: 20051,
@@ -881,7 +881,7 @@ export default  [
 		kbb: 3952,
 		inspected: true,
 		crRating: 2.1,
-		imageFile: "http://localhost:4200/images/4.jpeg"
+		imageFile: "http://localhost:8081/images/4.jpeg"
 	},
 	{
 		vehicleMovementId: 20052,
@@ -898,7 +898,7 @@ export default  [
 		kbb: 1000,
 		inspected: true,
 		crRating: 2.5,
-		imageFile: "http://localhost:4200/images/5.jpeg"
+		imageFile: "http://localhost:8081/images/5.jpeg"
 	},
 	{
 		vehicleMovementId: 20053,
@@ -915,7 +915,7 @@ export default  [
 		kbb: 3330,
 		inspected: false,
 		crRating: 2.2,
-		imageFile: "http://localhost:4200/images/1.jpeg"
+		imageFile: "http://localhost:8081/images/1.jpeg"
 	},
 	{
 		vehicleMovementId: 20054,
@@ -932,7 +932,7 @@ export default  [
 		kbb: 2914,
 		inspected: true,
 		crRating: 4.4,
-		imageFile: "http://localhost:4200/images/9.jpeg"
+		imageFile: "http://localhost:8081/images/9.jpeg"
 	},
 	{
 		vehicleMovementId: 20055,
@@ -949,7 +949,7 @@ export default  [
 		kbb: 1639,
 		inspected: true,
 		crRating: 3.1,
-		imageFile: "http://localhost:4200/images/7.jpeg"
+		imageFile: "http://localhost:8081/images/7.jpeg"
 	},
 	{
 		vehicleMovementId: 20056,
@@ -966,7 +966,7 @@ export default  [
 		kbb: 1990,
 		inspected: false,
 		crRating: 4.5,
-		imageFile: "http://localhost:4200/images/6.jpeg"
+		imageFile: "http://localhost:8081/images/6.jpeg"
 	},
 	{
 		vehicleMovementId: 20057,
@@ -983,7 +983,7 @@ export default  [
 		kbb: 1926,
 		inspected: false,
 		crRating: 2.9,
-		imageFile: "http://localhost:4200/images/6.jpeg"
+		imageFile: "http://localhost:8081/images/6.jpeg"
 	},
 	{
 		vehicleMovementId: 20058,
@@ -1000,7 +1000,7 @@ export default  [
 		kbb: 6397,
 		inspected: true,
 		crRating: 2,
-		imageFile: "http://localhost:4200/images/8.jpeg"
+		imageFile: "http://localhost:8081/images/8.jpeg"
 	},
 	{
 		vehicleMovementId: 20059,
@@ -1017,7 +1017,7 @@ export default  [
 		kbb: 3968,
 		inspected: false,
 		crRating: 4.3,
-		imageFile: "http://localhost:4200/images/10.jpeg"
+		imageFile: "http://localhost:8081/images/10.jpeg"
 	},
 	{
 		vehicleMovementId: 20060,
@@ -1034,7 +1034,7 @@ export default  [
 		kbb: 4867,
 		inspected: true,
 		crRating: 3.2,
-		imageFile: "http://localhost:4200/images/2.jpeg"
+		imageFile: "http://localhost:8081/images/2.jpeg"
 	},
 	{
 		vehicleMovementId: 20061,
@@ -1051,7 +1051,7 @@ export default  [
 		kbb: 1593,
 		inspected: true,
 		crRating: 4.8,
-		imageFile: "http://localhost:4200/images/1.jpeg"
+		imageFile: "http://localhost:8081/images/1.jpeg"
 	},
 	{
 		vehicleMovementId: 20062,
@@ -1068,7 +1068,7 @@ export default  [
 		kbb: 3171,
 		inspected: false,
 		crRating: 2.1,
-		imageFile: "http://localhost:4200/images/7.jpeg"
+		imageFile: "http://localhost:8081/images/7.jpeg"
 	},
 	{
 		vehicleMovementId: 20063,
@@ -1085,7 +1085,7 @@ export default  [
 		kbb: 2967,
 		inspected: false,
 		crRating: 4.9,
-		imageFile: "http://localhost:4200/images/7.jpeg"
+		imageFile: "http://localhost:8081/images/7.jpeg"
 	},
 	{
 		vehicleMovementId: 20064,
@@ -1102,7 +1102,7 @@ export default  [
 		kbb: 5567,
 		inspected: false,
 		crRating: 2.1,
-		imageFile: "http://localhost:4200/images/10.jpeg"
+		imageFile: "http://localhost:8081/images/10.jpeg"
 	},
 	{
 		vehicleMovementId: 20065,
@@ -1119,7 +1119,7 @@ export default  [
 		kbb: 5185,
 		inspected: false,
 		crRating: 3.3,
-		imageFile: "http://localhost:4200/images/9.jpeg"
+		imageFile: "http://localhost:8081/images/9.jpeg"
 	},
 	{
 		vehicleMovementId: 20066,
@@ -1136,7 +1136,7 @@ export default  [
 		kbb: 4505,
 		inspected: false,
 		crRating: 3.3,
-		imageFile: "http://localhost:4200/images/1.jpeg"
+		imageFile: "http://localhost:8081/images/1.jpeg"
 	},
 	{
 		vehicleMovementId: 20067,
@@ -1153,7 +1153,7 @@ export default  [
 		kbb: 4019,
 		inspected: true,
 		crRating: 2.3,
-		imageFile: "http://localhost:4200/images/7.jpeg"
+		imageFile: "http://localhost:8081/images/7.jpeg"
 	},
 	{
 		vehicleMovementId: 20068,
@@ -1170,7 +1170,7 @@ export default  [
 		kbb: 1463,
 		inspected: false,
 		crRating: 3.5,
-		imageFile: "http://localhost:4200/images/7.jpeg"
+		imageFile: "http://localhost:8081/images/7.jpeg"
 	},
 	{
 		vehicleMovementId: 20069,
@@ -1187,7 +1187,7 @@ export default  [
 		kbb: 1682,
 		inspected: true,
 		crRating: 4.2,
-		imageFile: "http://localhost:4200/images/4.jpeg"
+		imageFile: "http://localhost:8081/images/4.jpeg"
 	},
 	{
 		vehicleMovementId: 20070,
@@ -1204,7 +1204,7 @@ export default  [
 		kbb: 2844,
 		inspected: true,
 		crRating: 2.2,
-		imageFile: "http://localhost:4200/images/8.jpeg"
+		imageFile: "http://localhost:8081/images/8.jpeg"
 	},
 	{
 		vehicleMovementId: 20071,
@@ -1221,7 +1221,7 @@ export default  [
 		kbb: 1116,
 		inspected: true,
 		crRating: 2.5,
-		imageFile: "http://localhost:4200/images/4.jpeg"
+		imageFile: "http://localhost:8081/images/4.jpeg"
 	},
 	{
 		vehicleMovementId: 20072,
@@ -1238,7 +1238,7 @@ export default  [
 		kbb: 3299,
 		inspected: false,
 		crRating: 4.8,
-		imageFile: "http://localhost:4200/images/7.jpeg"
+		imageFile: "http://localhost:8081/images/7.jpeg"
 	},
 	{
 		vehicleMovementId: 20073,
@@ -1255,7 +1255,7 @@ export default  [
 		kbb: 6277,
 		inspected: false,
 		crRating: 4.2,
-		imageFile: "http://localhost:4200/images/10.jpeg"
+		imageFile: "http://localhost:8081/images/10.jpeg"
 	},
 	{
 		vehicleMovementId: 20074,
@@ -1272,7 +1272,7 @@ export default  [
 		kbb: 3337,
 		inspected: false,
 		crRating: 3.4,
-		imageFile: "http://localhost:4200/images/7.jpeg"
+		imageFile: "http://localhost:8081/images/7.jpeg"
 	},
 	{
 		vehicleMovementId: 20075,
@@ -1289,7 +1289,7 @@ export default  [
 		kbb: 2611,
 		inspected: true,
 		crRating: 3.1,
-		imageFile: "http://localhost:4200/images/3.jpeg"
+		imageFile: "http://localhost:8081/images/3.jpeg"
 	},
 	{
 		vehicleMovementId: 20076,
@@ -1306,7 +1306,7 @@ export default  [
 		kbb: 1032,
 		inspected: true,
 		crRating: 3.4,
-		imageFile: "http://localhost:4200/images/5.jpeg"
+		imageFile: "http://localhost:8081/images/5.jpeg"
 	},
 	{
 		vehicleMovementId: 20077,
@@ -1323,7 +1323,7 @@ export default  [
 		kbb: 1161,
 		inspected: true,
 		crRating: 3.9,
-		imageFile: "http://localhost:4200/images/7.jpeg"
+		imageFile: "http://localhost:8081/images/7.jpeg"
 	},
 	{
 		vehicleMovementId: 20078,
@@ -1340,7 +1340,7 @@ export default  [
 		kbb: 1934,
 		inspected: true,
 		crRating: 3.5,
-		imageFile: "http://localhost:4200/images/4.jpeg"
+		imageFile: "http://localhost:8081/images/4.jpeg"
 	},
 	{
 		vehicleMovementId: 20079,
@@ -1357,7 +1357,7 @@ export default  [
 		kbb: 1779,
 		inspected: false,
 		crRating: 2.9,
-		imageFile: "http://localhost:4200/images/6.jpeg"
+		imageFile: "http://localhost:8081/images/6.jpeg"
 	},
 	{
 		vehicleMovementId: 20080,
@@ -1374,7 +1374,7 @@ export default  [
 		kbb: 4821,
 		inspected: true,
 		crRating: 3.5,
-		imageFile: "http://localhost:4200/images/3.jpeg"
+		imageFile: "http://localhost:8081/images/3.jpeg"
 	},
 	{
 		vehicleMovementId: 20081,
@@ -1391,7 +1391,7 @@ export default  [
 		kbb: 2329,
 		inspected: true,
 		crRating: 4.4,
-		imageFile: "http://localhost:4200/images/7.jpeg"
+		imageFile: "http://localhost:8081/images/7.jpeg"
 	},
 	{
 		vehicleMovementId: 20082,
@@ -1408,7 +1408,7 @@ export default  [
 		kbb: 2137,
 		inspected: true,
 		crRating: 3.9,
-		imageFile: "http://localhost:4200/images/1.jpeg"
+		imageFile: "http://localhost:8081/images/1.jpeg"
 	},
 	{
 		vehicleMovementId: 20083,
@@ -1425,7 +1425,7 @@ export default  [
 		kbb: 2157,
 		inspected: true,
 		crRating: 2.2,
-		imageFile: "http://localhost:4200/images/7.jpeg"
+		imageFile: "http://localhost:8081/images/7.jpeg"
 	},
 	{
 		vehicleMovementId: 20084,
@@ -1442,7 +1442,7 @@ export default  [
 		kbb: 1711,
 		inspected: false,
 		crRating: 3.5,
-		imageFile: "http://localhost:4200/images/9.jpeg"
+		imageFile: "http://localhost:8081/images/9.jpeg"
 	},
 	{
 		vehicleMovementId: 20085,
@@ -1459,7 +1459,7 @@ export default  [
 		kbb: 4413,
 		inspected: false,
 		crRating: 3.5,
-		imageFile: "http://localhost:4200/images/10.jpeg"
+		imageFile: "http://localhost:8081/images/10.jpeg"
 	},
 	{
 		vehicleMovementId: 20086,
@@ -1476,7 +1476,7 @@ export default  [
 		kbb: 6675,
 		inspected: true,
 		crRating: 2.1,
-		imageFile: "http://localhost:4200/images/9.jpeg"
+		imageFile: "http://localhost:8081/images/9.jpeg"
 	},
 	{
 		vehicleMovementId: 20087,
@@ -1493,7 +1493,7 @@ export default  [
 		kbb: 4758,
 		inspected: true,
 		crRating: 4.3,
-		imageFile: "http://localhost:4200/images/4.jpeg"
+		imageFile: "http://localhost:8081/images/4.jpeg"
 	},
 	{
 		vehicleMovementId: 20088,
@@ -1510,7 +1510,7 @@ export default  [
 		kbb: 2440,
 		inspected: false,
 		crRating: 4.3,
-		imageFile: "http://localhost:4200/images/9.jpeg"
+		imageFile: "http://localhost:8081/images/9.jpeg"
 	},
 	{
 		vehicleMovementId: 20089,
@@ -1527,7 +1527,7 @@ export default  [
 		kbb: 1614,
 		inspected: true,
 		crRating: 4.1,
-		imageFile: "http://localhost:4200/images/2.jpeg"
+		imageFile: "http://localhost:8081/images/2.jpeg"
 	},
 	{
 		vehicleMovementId: 20090,
@@ -1544,7 +1544,7 @@ export default  [
 		kbb: 4510,
 		inspected: true,
 		crRating: 3.9,
-		imageFile: "http://localhost:4200/images/3.jpeg"
+		imageFile: "http://localhost:8081/images/3.jpeg"
 	},
 	{
 		vehicleMovementId: 20091,
@@ -1561,7 +1561,7 @@ export default  [
 		kbb: 3373,
 		inspected: false,
 		crRating: 4.4,
-		imageFile: "http://localhost:4200/images/4.jpeg"
+		imageFile: "http://localhost:8081/images/4.jpeg"
 	},
 	{
 		vehicleMovementId: 20092,
@@ -1578,7 +1578,7 @@ export default  [
 		kbb: 5110,
 		inspected: true,
 		crRating: 2.2,
-		imageFile: "http://localhost:4200/images/7.jpeg"
+		imageFile: "http://localhost:8081/images/7.jpeg"
 	},
 	{
 		vehicleMovementId: 20093,
@@ -1595,7 +1595,7 @@ export default  [
 		kbb: 6349,
 		inspected: false,
 		crRating: 3.6,
-		imageFile: "http://localhost:4200/images/7.jpeg"
+		imageFile: "http://localhost:8081/images/7.jpeg"
 	},
 	{
 		vehicleMovementId: 20094,
@@ -1612,7 +1612,7 @@ export default  [
 		kbb: 4255,
 		inspected: false,
 		crRating: 2.2,
-		imageFile: "http://localhost:4200/images/9.jpeg"
+		imageFile: "http://localhost:8081/images/9.jpeg"
 	},
 	{
 		vehicleMovementId: 20095,
@@ -1629,7 +1629,7 @@ export default  [
 		kbb: 4561,
 		inspected: false,
 		crRating: 4.2,
-		imageFile: "http://localhost:4200/images/3.jpeg"
+		imageFile: "http://localhost:8081/images/3.jpeg"
 	},
 	{
 		vehicleMovementId: 20096,
@@ -1646,7 +1646,7 @@ export default  [
 		kbb: 4258,
 		inspected: false,
 		crRating: 2.5,
-		imageFile: "http://localhost:4200/images/2.jpeg"
+		imageFile: "http://localhost:8081/images/2.jpeg"
 	},
 	{
 		vehicleMovementId: 20097,
@@ -1663,7 +1663,7 @@ export default  [
 		kbb: 1962,
 		inspected: true,
 		crRating: 4.3,
-		imageFile: "http://localhost:4200/images/5.jpeg"
+		imageFile: "http://localhost:8081/images/5.jpeg"
 	},
 	{
 		vehicleMovementId: 20098,
@@ -1680,7 +1680,7 @@ export default  [
 		kbb: 1140,
 		inspected: true,
 		crRating: 4.8,
-		imageFile: "http://localhost:4200/images/8.jpeg"
+		imageFile: "http://localhost:8081/images/8.jpeg"
 	},
 	{
 		vehicleMovementId: 20099,
@@ -1697,7 +1697,7 @@ export default  [
 		kbb: 2067,
 		inspected: false,
 		crRating: 4.4,
-		imageFile: "http://localhost:4200/images/2.jpeg"
+		imageFile: "http://localhost:8081/images/2.jpeg"
 	}
 ];
 

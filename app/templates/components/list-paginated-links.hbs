@@ -1,7 +1,15 @@
-{{#each pages as |page index|}}  
-  {{#if (eq page currentPage) }}
-    {{page}}
-  {{else}}
-    {{#link-to pageRoute (query-params page=page)}}{{page}}{{/link-to}}
-  {{/if}}
-{{/each}}
+<nav aria-label="Page navigation" class={{class-helper hasPages "center" "center hidden"}}>
+  <ul class="pagination">
+      <li class={{class-helper (eq currentPage 1) "disabled" ""}}>
+          {{#link-to pageRoute (query-params page=previousPage)}}&laquo;{{/link-to}}
+      </li>
+      {{#each pages as |page index|}}
+      <li class={{class-helper (eq page currentPage) "active" ""}}>
+          {{#link-to pageRoute (query-params page=page)}}{{page}}{{/link-to}}
+      </li>
+      {{/each}}
+      <li class={{class-helper (eq currentPage totalPages) "disabled" ""}}>
+          {{#link-to pageRoute (query-params page=nextPage)}}&raquo;{{/link-to}}
+      </li>
+  </ul>
+</nav>

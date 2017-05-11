@@ -31,6 +31,7 @@ export default function() {
         //     result.models = vehiclesForCurrentPage;
         // }
         
+        result.total = result.length;
         return result;
     });
 

@@ -19,27 +19,27 @@ describe('Acceptance | vehicle', function() {
 
   it('can visit /vehicles/:id for a valid vehicle', function() {
 
-    server.createList('vehicle', 10); 
-    visit('/vehicles/1000');
+    server.loadFixtures('vehicles'); 
+    visit('/vehicles/20000');
 
     return andThen(() => {
-      assert.equal(currentURL(), '/vehicles/1000');
+      assert.equal(currentURL(), '/vehicles/20000');
     });
   });
 
   it('displays correct information for vehicle', function() {
 
     server.loadFixtures('vehicles'); 
-    visit('/vehicles/999');
+    visit('/vehicles/20000');
 
     return andThen(() => {
-      assert.equal(currentURL(), '/vehicles/999');
-      assert.equal($('.vehicle-title').text(), "2000 Fixture Make Fixture Model Fixture Trim");
+      assert.equal(currentURL(), '/vehicles/20000');
+      assert.equal($('.vehicle-title').text(), "1995 Nissan Pathfinder 4WD V8, Turbo Dsl 6.4L");
       assert.equal(find(".inspected").length, 1);
-      assert.equal($('.vehicle-location').text(), "Location: Taguig City");
-      assert.equal($('.vehicle-color').text(), "Color: green");
-      assert.equal($('.vehicle-mileage').text(), "Mileage: 30000");
-      assert.equal($('.vehicle-asking').text(), "Asking Price: 20000");
+      assert.equal($('.vehicle-location').text(), "Location: Tracy CA");
+      assert.equal($('.vehicle-color').text(), "Color: Blue");
+      assert.equal($('.vehicle-mileage').text(), "Mileage: 91064");
+      assert.equal($('.vehicle-asking').text(), "Asking Price: 5995");
     });
   });
 

@@ -6,8 +6,7 @@ export default Ember.Service.extend(Ember.Evented, {
 
     init() {
         this._super(...arguments);
-
-        //setup push stream
+        
         console.log('init service');
         //PushStream.LOG_LEVEL = 'debug';
         let pushstream = new PushStream({
@@ -15,9 +14,6 @@ export default Ember.Service.extend(Ember.Evented, {
             modes: "websocket|eventsource|stream"
         });
         
-        //pushstream.onmessage = this.manageEvent.bind(this);
-        //pushstream.onstatuschange = this.statusChanged.bind(this);
-
         pushstream.onmessage = Ember.run.bind(this, this.manageEvent);
         pushstream.onstatuschange = Ember.run.bind(this, this.statusChanged);
         this.set("pushstream",pushstream);

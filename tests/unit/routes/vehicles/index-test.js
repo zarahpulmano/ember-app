@@ -29,50 +29,13 @@ describe('Unit | Route | vehicles/index', function() {
             let spy = sinon.spy();
             let route = this.subject({
                 vehicleService: {
-                    getVehicles: spy
+                    getVehiclesByParameters: spy
                 }
             });
 
             route.model();          
             assert.ok(spy.called, "should call getVehicles")
             assert.ok(spy.calledOnce, "should call getVehicles once");
-        });
-    })
-
-    describe('Actions', function() {
-
-        it('filterByMake should call getVehicles if filter is null', function(){
-
-            let getVehiclesSpy = sinon.spy();
-            let getVehiclesByMakeSpy = sinon.spy();
-
-            let route = this.subject({
-                vehicleService: {
-                    getVehicles: getVehiclesSpy,
-                    getVehiclesByMake: getVehiclesByMakeSpy
-                }
-            });
-
-            route.send('filterByMake','');
-            assert.isOk(getVehiclesSpy.called);
-            assert.isNotOk(getVehiclesByMakeSpy.called);
-        });
-
-        it('filterByMake should call getVehiclesByMake if filter is not null', function(){
-
-            let getVehiclesSpy = sinon.spy();
-            let getVehiclesByMakeSpy = sinon.spy();
-
-            let route = this.subject({
-                vehicleService: {
-                    getVehicles: getVehiclesSpy,
-                    getVehiclesByMake: getVehiclesByMakeSpy
-                }
-            });
-
-            route.send('filterByMake','make');
-            assert.isOk(getVehiclesByMakeSpy.called);
-            assert.isNotOk(getVehiclesSpy.called);
         });
     })
 

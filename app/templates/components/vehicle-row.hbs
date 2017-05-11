@@ -4,10 +4,7 @@
     </div>
     <div class="col-md-5 col-xs-5">
         <div class="row">
-            {{#link-to "vehicle.index" vehicle.vehicleMovementId class="vehicle-link col-md-9 col-xs-9"}}
-                <label>{{vehicle.vehicleTitle}}</label>
-            {{/link-to}}
-
+            {{#link-to "vehicle.index" vehicle.vehicleMovementId class="vehicle-link col-md-9 col-xs-9"}}<label>{{vehicle.vehicleTitle}}</label>{{/link-to}}
             <label class="col-md-3 col-xs-3">{{vehicle.mileage}} mi</label>
         </div>
         <div class="row">
@@ -22,13 +19,9 @@
                 <img class="bidderAvatar" src={{vehicle.bidderAvatar}}/>
             </div>
             <div class="col-md-9 col-xs-9">
-                <label class="col-md-12 col-xs-12">
-                        Bidder: {{vehicle.bidder}}
-                    </label>
-                <label class="col-md-12 col-xs-12 bidAmount">
-                     {{vehicle-helper vehicle.bidAmount}}
-                </label>
-                <div class="col-md-12 col-xs-12">
+                <label class="col-md-12 col-xs-12">Bidder: {{vehicle.bidder}}</label>
+                <label class="col-md-12 col-xs-12 bidAmount">{{vehicle-helper vehicle.bidAmount}}</label>
+                <div class="col-md-12 col-xs-12 inputBid">
                     Bid Amount: {{input value=inputBid}}
                 </div>
                 <div class="col-md-12 col-xs-12">
