@@ -31,7 +31,7 @@ export default Ember.Controller.extend(PaginationMixin, {
         let bidder = message.bidder;
         let bidderAvatar = message.bidderAvatar;
         if (bidderAvatar.length == 0) {
-            bidderAvatar="http://localhost:4201/images/avatarPlaceholder.png"
+            bidderAvatar="http://localhost:8081/images/avatarPlaceholder.png"
         }
 
         let vehicles = self.get('vehicles');
