@@ -9,9 +9,7 @@ export default Ember.Route.extend({
 
     setupController(controller, model) {
 		controller.set('vehicles', model);
-        Ember.run.scheduleOnce('afterRender', this, function() {
-            controller.subscribeToPushStream();
-        });
+        controller.subscribeToPushStream();
     },
 
     resetController(controller, isExiting, transition) {

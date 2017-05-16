@@ -9,9 +9,7 @@ export default Ember.Controller.extend({
         let self = this;
         self._super(...arguments);
         let pushstreamService = this.get('pushstreamService');
-        pushstreamService.on('onmessage', function(message) {
-            self.handleServiceOnMessage(message);
-        });
+        pushstreamService.on('onmessage', Ember.run.bind(this, this.handleServiceOnMessage));
     },
 
     unsubscribeFromPushStream() {
@@ -22,12 +20,16 @@ export default Ember.Controller.extend({
 
     handleServiceOnMessage(message) {
         console.log('Received Not Paged Controller ', JSON.stringify(message));
+        let self = this;
         let vehicleMovementId = parseInt(message.vehicleMovementId);
         let bidAmount = parseInt(message.amount);
         let bidder = message.bidder;
         let bidderAvatar = message.bidderAvatar;
-        
-        let vehicles = this.get('vehicles');
+        if (bidderAvatar.length == 0) {
+            bidderAvatar="http://localhost:8081/images/avatarPlaceholder.png"
+        }
+
+        let vehicles = self.get('vehicles');
         let vehicle = vehicles.findBy('vehicleMovementId',vehicleMovementId);
         if (vehicle) {
             vehicle.set('bidAmount',bidAmount);

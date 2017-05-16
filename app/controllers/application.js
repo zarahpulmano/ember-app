@@ -5,11 +5,12 @@ export default Ember.Controller.extend({
     init() {
         this._super(...arguments);
         let pushstreamService = this.get('pushstreamService');
+        // let channel = pushstreamService.get('channel');
+        // pushstreamService.connect(channel);
 
-        Ember.run.scheduleOnce('afterRender', this, function() {
-            console.log('connect to push stream');
-            let channel = pushstreamService.get('channel');
-            pushstreamService.connect(channel);
-        });
+        // Ember.run.scheduleOnce('afterRender', this, function() {
+        //     let channel = pushstreamService.get('channel');
+        //     pushstreamService.connect(channel);
+        // });
     }
 });

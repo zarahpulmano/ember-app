@@ -1,6 +1,7 @@
 import Mirage from 'ember-cli-mirage';
 
 export default function() {
+    this.logging = false;
     this.urlPrefix = 'http://localhost:8081';
     this.namespace = '';
     

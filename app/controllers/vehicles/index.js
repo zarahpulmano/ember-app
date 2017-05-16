@@ -18,7 +18,7 @@ export default Ember.Controller.extend(PaginationMixin, {
     },
 
     unsubscribeFromPushStream() {
-        console.log('turning off subscription vehicles');
+        console.log('turning off subscription vehicles paged');
         let pushstreamService = this.get('pushstreamService');
         pushstreamService.off('onmessage');
     },
